@@ -1,6 +1,7 @@
 package previous_hw;
 
 public class Cat extends Animal{
+
     public Cat(String name) {
         super("Кот" + name);
         this.runLimit = 200;
@@ -8,6 +9,6 @@ public class Cat extends Animal{
     }
 
     public void swim(int distance) {
-        System.out.println("Кот" + name + " не умеет плавать!");
+        System.out.println(name + " не умеет плавать!");
     }
 }
