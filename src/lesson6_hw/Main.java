@@ -11,20 +11,18 @@
 
 package lesson6_hw;
 
-public class Cat {
-    private String name;
-    private int appetite;
+public class Main {
 
-    public Cat(String name, int appetite) {
-        this.name = name;
-        this.appetite = appetite;
-    }
-    public void eat(Plate plate) {
-        if (plate.decreasedFood(appetite)) {
-            System.out.println(name + " - ест фрикадельки, становится сытым и мурлычет!");
-        } else {
-            System.out.println(name + " - ему мало столько фрикаделек, жалуется и мяучит!");
+        public static void main(String[] args) {
+
+            Plate plate = new Plate(10);
+            System.out.println(plate);
+
+            Cat[]cats = {new Cat("Пушок",5),new Cat("Мурзик",7), new Cat("Афанасий", 9)};
+            for (Cat c : cats) {
+                c.eat(plate);
+            }
+            System.out.println("Остаток " + plate);
         }
-    }
 
 }
