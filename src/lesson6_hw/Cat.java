@@ -9,8 +9,12 @@
 7. Когда еда в тарелке кончается, нужно оповещать об этом и наполнять её едой.
  */
 
-package hw_lesson5;
+package lesson6_hw;
 
-public class Cat {
+public class Cat extends Animal{
 
+    public Cat(String name) {
+        super("Кот" + name);
+        this.eatLimit = 10;
+    }
 }
